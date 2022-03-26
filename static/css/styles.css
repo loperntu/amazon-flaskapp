@@ -1,0 +1,84 @@
+body{
+    align-items: center;
+    background-image: linear-gradient(#c5d7bd, #a4ebf3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.panel{
+    align-items: center;
+    border-radius: 1em;
+    background-color: #f7efe8;
+    box-shadow: 2px 3px 3px black;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    min-height: 50vh;
+    justify-content: center;
+    width:65vw;
+}
+
+
+#button{
+    height: 35px;
+    width: 100px;
+    border-radius: 2em;
+    border-width: 1px;
+    border-color:#00C897;
+    border-style: solid;
+    background-color: transparent;
+    font-size: 18px;
+    transition: background-color .2s, transform .2s, box-shadow .2s;
+    margin:5px 5px ;
+}
+
+#button:hover{
+    background-color: #E8FFC2;
+    transform: translateY(-1.5px);
+    box-shadow: 1px 1.5px 1.5px black;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    height: 35vh;
+}
+
+.title{
+    margin-bottom: 5vh;
+}
+
+#textbox{
+    height: 150px;
+    width:70%;
+    max-width: 90%;
+}
+
+#prediction{
+    display: None;
+    align-items: center;
+    flex-direction: column;
+    margin:5px 5px;
+
+}
+
+#prediction-text{
+    font-size: 25px;
+    color: black;
+    animation-name: example;
+    animation-duration:2s;
+}
+
+#original-text{
+    font-size: 16px;
+}
+
+@keyframes example {
+    0%   {color: transparent;}
+    100% {color: black;}
+  }
