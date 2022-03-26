@@ -9,7 +9,22 @@ preprocessor = Preprocessor()
 predictor = Predictor()
 
 # Define API endpoints here:
+@app.route('/')
+def home():
+    return render_template('index.html')    
 
+
+@app.route('/predict', methods=['POST'])
+def predict():
+    # receive ajax payload 
+    payload = request.get_json()[0]
+    text = payload['text']
+    mlmodel = payload['mlmodel']
+    #process data 
+    doc_vec = preprocessor.get_doc_vec(text)
+    sentiment = predictor.predict_sentiment(mlmodel, doc_vec)
+
+    return jsonify(sentiment)
 
 
 
